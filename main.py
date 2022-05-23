@@ -35,6 +35,9 @@ def format_phone_number(contacts_list):
 
 
 def duplicate_entries(contacts_list):
+    for ent in contacts_list:
+        if len(ent) > 7:
+            del ent[-1]
     for i in contacts_list:
         for j in contacts_list:
             if i[0] == j[0] and i[1] == j[1] and i is not j:
